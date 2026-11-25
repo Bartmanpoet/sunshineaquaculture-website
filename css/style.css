@@ -135,3 +135,8 @@ main > section:not(.hero) .video-frame { background: var(--sand-card); border-co
 .site-footer .footer-bottom { border-top-color: #cfcbc2; }
 .site-footer a { color: var(--ink-muted); }
 .footer-name { color: var(--green); }
+
+/* Short pages: stretch the beige area so no dark band shows under the footer */
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; background: var(--sand); }
+.hero { background: var(--bg); }
