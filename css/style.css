@@ -108,3 +108,30 @@ section h2 { font-size: 1.5rem; margin: 0 0 24px; }
   .cards { grid-template-columns: 1fr; }
   .nav { gap: 16px; }
 }
+
+/* ---------- Squarespace look: dark header and hero, beige sections below ---------- */
+:root {
+  --sand: #dddad3;        /* beige from the Squarespace site */
+  --sand-card: #e9e6df;
+  --ink: #1a1f1c;
+  --ink-muted: #4a524d;
+  --green: #1e9448;       /* Squarespace heading and button green */
+}
+.button {
+  background: var(--green); color: #fff; border-radius: 999px;
+  padding: 14px 32px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.85rem;
+}
+.button:hover { background: #187a3b; }
+
+main > section:not(.hero) { background: var(--sand); color: var(--ink); margin: 0; padding: 56px 0; }
+main > section:not(.hero) h2 { color: var(--green); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500; line-height: 1.15; }
+main > section:not(.hero) a:not(.button) { color: var(--green); }
+main > section:not(.hero) .card { background: var(--sand-card); border-color: #cfcbc2; color: var(--ink); }
+main > section:not(.hero) .card p { color: var(--ink-muted); }
+main > section:not(.hero) .video-frame { background: var(--sand-card); border-color: #cfcbc2; color: var(--ink-muted); }
+
+.site-footer { background: var(--sand); color: var(--ink); border-top: 1px solid #cfcbc2; margin-top: 0; }
+.footer-about, .site-footer .footer-bottom { color: var(--ink-muted); }
+.site-footer .footer-bottom { border-top-color: #cfcbc2; }
+.site-footer a { color: var(--ink-muted); }
+.footer-name { color: var(--green); }
