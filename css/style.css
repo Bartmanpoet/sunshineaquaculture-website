@@ -140,3 +140,31 @@ main > section:not(.hero) .video-frame { background: var(--sand-card); border-co
 body { display: flex; flex-direction: column; min-height: 100vh; }
 main { flex: 1; background: var(--sand); }
 .hero { background: var(--bg); }
+
+/* ---------- Brighter look using the logo colors ---------- */
+:root {
+  --bg: #0b2a33;          /* logo deep-water teal (was near-black) */
+  --line: #1d4652;
+  --sand: #faf7f0;        /* light warm white */
+  --sand-card: #ffffff;
+  --aqua: #e3f3f1;        /* light aqua for alternate sections */
+  --orange: #f28c1b;      /* logo shrimp orange */
+}
+body { background: var(--bg); }
+.site-header { background: var(--bg); }
+.hero { background: linear-gradient(160deg, #0b2a33 0%, #12505c 100%); }
+.hero-media { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); }
+.tagline { color: #f7b468; }
+.motto { color: var(--orange); }
+main > section:not(.hero):nth-of-type(odd) { background: var(--aqua); }
+main > section:not(.hero) .card {
+  border: 1px solid #d9e6e3; border-top: 4px solid var(--orange);
+  box-shadow: 0 2px 10px rgba(11,42,51,0.06);
+}
+main > section:not(.hero) .card h3 { color: #0b2a33; }
+main > section:not(.hero) .video-frame { border-color: #d9e6e3; }
+.site-footer { background: var(--bg); color: #d7e3e1; border-top: 4px solid var(--orange); }
+.footer-about, .site-footer .footer-bottom { color: #b9cdca; }
+.site-footer .footer-bottom { border-top-color: var(--line); }
+.site-footer a { color: #d7e3e1; }
+.footer-name { color: var(--orange); }
