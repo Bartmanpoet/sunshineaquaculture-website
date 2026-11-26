@@ -23,3 +23,11 @@ Plain HTML and CSS, no framework or build step. Hosted on Cloudflare Pages, whic
 - Anything marked `PLACEHOLDER` still needs your real content.
 
 To preview locally, open `index.html` in a browser.
+
+## How publishing works
+
+- Cloudflare Pages builds the live site from the `main` branch.
+- Preview work goes on another branch first. Cloudflare gives each preview its own address.
+- When a preview is approved, it is merged into `main` **as a new commit** (`git merge --no-ff`).
+  Cloudflare skips a commit it has already built as a preview, so a plain fast-forward
+  can leave the live site on an older version.
